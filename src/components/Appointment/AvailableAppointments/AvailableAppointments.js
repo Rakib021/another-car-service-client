@@ -9,7 +9,7 @@ const [services,setServices] = useState([]);
 const [bookingModal,setBookingModal] = useState(null);
 
 useEffect(()=>{
-    fetch('services.json')
+    fetch('http://localhost:5000/appointmentService')
     .then(res =>res.json())
     .then(data =>setServices(data));
 },[])

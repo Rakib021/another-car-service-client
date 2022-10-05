@@ -6,8 +6,8 @@ const AppointmentService = ({appointmentService,setBookingModal}) => {
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
         <figure><img src={img} alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">
+        <div className="card-body text-center">
+          <h2 className="text-xl text-sky-400/100">
             {name}
             <div className="badge badge-secondary">NEW</div>
           </h2>
@@ -19,13 +19,13 @@ const AppointmentService = ({appointmentService,setBookingModal}) => {
               }
           </p>
           <p>{slots.length} {slots.length >1 ? 'spaces' :'space'} Available</p>
-          <div className="card-actions justify-end">
+          <div className="card-actions justify-center">
          
           <label
          
           onClick={()=>setBookingModal(appointmentService)}
           disabled ={slots.length ===0}
-          htmlFor="booking-modal" className="btn modal-button btn btn-primary uppercase text-white font-bold bg-gradient-to-r from-cyan-500 to-blue-500">Book Appointment</label>
+          htmlFor="booking-modal" className="btn btn-sm modal-button btn btn-primary uppercase text-white font-bold bg-gradient-to-r from-cyan-500 to-blue-500">Book Appointment</label>
       
           </div>
         </div>
